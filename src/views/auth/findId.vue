@@ -62,11 +62,11 @@
               </v-list-item-content>
             </v-list-item>
             <p class="info-txt d-grey">
-              아이디를 모두 확인하시려면<br>이메일인증 후 확인하실 수 있습니다.
+              아이디를 모두 확인하시려면<br> 이메일인증 후 확인하실 수 있습니다.
             </p>
             <v-btn
               color="#FD7B54"
-              width="100%"
+              block
               large
               depressed
               dark
