@@ -1,0 +1,66 @@
+// product-list
+
+// 메인 상품
+.prd-list {
+
+  padding:10px !important; box-shadow:none !important;
+
+  .img {
+    position:relative;
+    display:block;
+    text-align: center;
+    border:1px solid #eee;
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+    width:100%;
+
+    .v-btn{position:absolute; bottom:0; right:0; }
+  }
+
+  .prd-info{
+    box-shadow: none !important;
+
+    .brand{ display: block; font-size: 12px; margin-top: 10px; color:#888;}
+    .prd-name{display:block; font-size: 14px; font-weight: 600; line-height: 18px;}
+    .discount{display: inline-block; margin-right: 5px; }
+    .price{font-size: 18px;}
+  }
+}
+
+// 상품 슬라이드
+
+.v-slide-group.prd-slide-wrap{
+  padding: 7px 0px 0px 10px !important;
+
+  .v-slide-group__prev,.v-slide-group__next{
+    min-width: 30px !important;
+    height:30px;
+    border-radius:50%;
+    position: absolute;
+    margin: 0 7px;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    display: none !important;
+    background: rgba(255,255,255,.9);
+    }
+  .v-slide-group__prev{left: 0;}
+  .v-slide-group__next{right: 0;}
+  .v-slide-group__prev .v-icon{font-size: 30px;}
+  .v-slide-group__next .v-icon{font-size: 30px;}
+
+
+  @media(min-width:730px){
+      .v-slide-group__prev,.v-slide-group__next{display: block !important;}
+      .v-slide-group{padding: 7px 50px 7px 40px !important;}
+   }
+}
+
+// 광고 슬라이드
+.ad-slide{
+  .v-sheet{
+    background-color: transparent !important;
+    border-color: transparent !important;
+  }
+}

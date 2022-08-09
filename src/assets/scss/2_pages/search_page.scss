@@ -1,0 +1,20 @@
+.prd-list.grid-2{
+
+  .v-card__title{
+    h3{
+      margin: 0 auto;
+    }
+  }
+}
+
+
+//검색 결과 창
+
+.prd-result-table{
+  .v-item-group{
+    width: 100%;
+    .prd-item{
+      width: 50% !important; float: left;
+    }
+  }
+}
