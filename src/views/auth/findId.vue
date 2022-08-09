@@ -28,7 +28,7 @@
           <v-btn
             v-if="!userInfo"
             color="#FD7B54"
-            width="100%"
+            block
             depressed
             dark
             x-large
