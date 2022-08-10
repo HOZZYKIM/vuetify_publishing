@@ -160,7 +160,7 @@
             filled
             outlined
             dense
-            hide-detail
+            hide-details
             prepend-icon="mdi-camera"
             class="pb-0"
           />
@@ -266,6 +266,7 @@
               :rules="user_email_rule"
               outlined
               dense
+              hide-details
               class="pr-1"
             />
             <v-btn
@@ -273,11 +274,39 @@
               dark
               depressed
               height="40"
+              @click="[expand = true, clickedBtn()]"
             >
-              인증
+              {{ btnMsg }}
+            </v-btn>
+          </div>
+          <ul class="info-txt-wrap xs-txt pa-0 pb-5">
+            <li>· 아이디, 비밀번호 찾기 시 이메일로 인증번호가 발송됩니다.</li>
+            <li>· 인증번호는 메일 발송 후 60초 이내 입력해주세요.</li>
+          </ul>
+          <div
+            v-if="expand"
+            class="d-flex"
+          >
+            <v-text-field
+              v-model="certif_num"
+              label="이메일 인증번호"
+              :rules="certif_num_rule"
+              outlined
+              dense
+              class="pr-1"
+            />
+            <v-btn
+              :style="btnStyle"
+              dark
+              depressed
+              height="40"
+              @click="[clickedBtn2(),noData()]"
+            >
+              {{ btnCertif }}
             </v-btn>
           </div>
         </v-col>
+
         <v-col
           cols="12"
           class="py-0"
@@ -296,7 +325,7 @@
 
     <!-- 회원 정보 입력 (선택) -->
     <v-card
-      class="elevation-0"
+      class="elevation-0 mt-3"
     >
       <v-card-title class="font-weight-black pl-2 pb-3 mb-7">
         회원정보 입력 (선택)
@@ -342,6 +371,16 @@
     data() {
       return {
         toggle : true,
+        expand: false,
+        btnMsg : "인증",
+        btnMsg2: "인증번호 재발송",
+        btnCertif: "인증확인",
+        btnCertif2: "인증완료",
+        btnStyle: {
+          backgroundColor : "#FD7B54",
+          disabled: false
+        },
+
         link:"https://www.niceid.co.kr/comp/register/comp_guid.nc",
         state: 'ins',
 
@@ -379,10 +418,26 @@
           v => this.state === 'ins' ? !!v || '휴대폰번호를 입력해주세요.' : true,
           v => !!(v && /^[0-9]*$/.test(v)) || '숫자만 입력 가능합니다.'
         ],
+        certif_num:'',
+        certif_num_rule: [
+          v => !!v || '인증번호를 입력해주세요.',
+          v => !!(v && /^[0-9]*$/.test(v)) || '숫자만 입력 가능합니다.'
+        ]
       };
     },
 
     methods: {
+        clickedBtn(){
+          this.btnMsg = this.btnMsg2
+        },
+        clickedBtn2(){
+          this.btnCertif = this.btnCertif2
+          this.btnStyle.backgroundColor = "#ffb49e"
+          this.disabled = true
+        },
+        noData () {
+        alert('이메일 인증번호가 일치하지 않습니다.')
+      },
     },
   };
 </script>
