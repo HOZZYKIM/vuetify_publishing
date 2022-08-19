@@ -1,6 +1,6 @@
 <template lang="">
   <v-container>
-    <v-card class="pa-2 elevation-0">
+    <v-card class="elevation-0">
       <v-card-title class="text-h3 pl-0">
         비밀번호 찾기
       </v-card-title>

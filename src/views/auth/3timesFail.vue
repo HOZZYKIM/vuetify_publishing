@@ -1,6 +1,6 @@
 <template lang="">
   <v-container>
-    <v-card class="pa-0 elevation-0">
+    <v-card class="elevation-0">
       <!-- <v-card-tite class="text-h3">
         비밀번호 <br> 재설정
       </v-card-tite> -->
@@ -15,7 +15,7 @@
           label="인증번호 입력"
           clearable
           hide-details
-          class=" pt-0 pr-1"
+          class="pt-0 pr-1"
         />
         <v-btn
           color="#FD7B54"

@@ -2,7 +2,7 @@
   <div>
     <v-toolbar
       color="white"
-      class="search-bar elevation-0"
+      class="search-bar elevation-3"
     >
       <v-container
         fluid

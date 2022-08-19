@@ -1,9 +1,9 @@
 <template>
   <v-container>
-    <v-row class="px-2">
+    <v-row>
       <v-col
         cols="12"
-        class="pa-0"
+        class="pa-1"
       >
         <v-list
           v-for="confirm in confirmAgrees"
@@ -162,7 +162,7 @@
       </v-col>
     </v-row>
 
-    <v-row class="px-3">
+    <v-row>
       <v-col>
         <v-btn
           type="submit"

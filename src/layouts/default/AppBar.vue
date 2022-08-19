@@ -62,5 +62,4 @@ export default {
 <style>
 .default-app-bar .v-chip.v-size--default{position: relative; background-color:#f5f5f5 !important; width: 180px; height: 35px; border-radius: 30vw; }
 .default-app-bar .v-chip.v-size--default .v-icon{position: absolute; left: 10px;}
-.v-dialog{position: fixed; bottom: 0; margin:0 !important;}
 </style>

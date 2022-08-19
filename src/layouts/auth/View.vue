@@ -2,7 +2,7 @@
   <v-main>
     <v-container
       fluid
-      pa-3
+      pa-2
     >
       <router-view />
     </v-container>

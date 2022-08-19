@@ -20,6 +20,7 @@
   }
 }
 
+
 .v-subheader{
   padding: 0 0 0 19px !important; font-size: 15px !important;
 }
@@ -57,6 +58,8 @@ input{
   font-size: 13px;
 }
 
+.v-messages__message{ line-height: 16px !important;}
+
 // 730px 초과 시 슬라이드 pagination 노출
 @media(min-width:730px){
   .prd-slide-wrap{
@@ -66,6 +69,7 @@ input{
     .v-slide-group__prev,.v-slide-group__next{display: block !important;}
   }
   .v-overlay{width: 730px; margin: 0 auto;}
+  .v-dialog{max-width: 730px; margin: 0 auto; left:auto !important;}
 
 }
 @media(min-width: 960px){

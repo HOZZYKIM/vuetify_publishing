@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-card class="pa-2 elevation-0">
+    <v-card class="elevation-0">
       <v-card-title class="text-h4 pl-0">
         회원가입이 <br> 완료되었습니다
       </v-card-title>

@@ -1,5 +1,5 @@
 <template lang="">
-  <v-container>
+  <v-container class="pa-0">
     <Dashboard />
     <RecomPrd />
     <popularPrd />
@@ -32,6 +32,6 @@ export default {
 
 }
 </script>
-<style>
-div.container{padding:0;}
+<style scoped>
+
 </style>

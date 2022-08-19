@@ -7,17 +7,17 @@
       <v-card-title class="font-weight-black pl-2 pb-3 mb-7">
         사업자 인증 (필수)
       </v-card-title>
-      <v-row class="">
+      <v-row>
         <v-col
           cols="12"
-          class="my-0 py-0"
+          class="py-0"
         >
           <div class="d-flex">
             <v-text-field
               label="사업자등록번호"
               clearable
               hint="사업자등록번호를 입력하세요"
-              class=" pt-0 pr-1"
+              class="pr-1"
               outlined
               dense
             />
@@ -33,7 +33,7 @@
         </v-col>
         <v-col
           cols="12"
-          class="mt-0 pt-0"
+          class="py-0 pb-2"
         >
           <ul class="info-txt-wrap xs-txt pl-0 pb-4">
             <li>· 하나의 사업자 번호로 여러개의 계정생성이 가능합니다.</li>
@@ -52,7 +52,6 @@
             label="상호명"
             clearable
             hint="상호명을 입력하세요"
-            class=" py-0"
             outlined
             dense
           />
@@ -65,7 +64,6 @@
             label="대표자명"
             clearable
             hint="대표자명을 입력하세요"
-            class=" py-0"
             outlined
             dense
           />

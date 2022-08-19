@@ -28,13 +28,47 @@
         class="pb-0"
       >
         <v-btn
-          v-for="tag in tags"
-          :key="tag"
           class="pa-0 ma-0 mr-1 elevation-0"
           color="white"
-          @click="toggleOrder"
+          @click=" searchResltCate = true"
         >
-          {{ tag }}
+          카테고리
+          <span
+            v-if="up"
+            class="sm-txt l-grey ma-0 pa-0 ml-1"
+          >
+            <v-icon left>mdi-chevron-down</v-icon>
+          </span>
+          <span
+            v-else
+            class="sm-txt l-grey ma-0 pa-0 ml-1"
+          >
+            <v-icon left>mdi-chevron-up</v-icon></span>
+        </v-btn>
+        <v-btn
+          class="pa-0 ma-0 mr-1 elevation-0"
+          color="white"
+          @click=" searchResltBrnd = true"
+        >
+          브랜드
+          <span
+            v-if="up"
+            class="sm-txt l-grey ma-0 pa-0 ml-1"
+          >
+            <v-icon left>mdi-chevron-down</v-icon>
+          </span>
+          <span
+            v-else
+            class="sm-txt l-grey ma-0 pa-0 ml-1"
+          >
+            <v-icon left>mdi-chevron-up</v-icon></span>
+        </v-btn>
+        <v-btn
+          class="pa-0 ma-0 mr-1 elevation-0"
+          color="white"
+          @click="searchResltBest = true"
+        >
+          인기순으로 보기
           <span
             v-if="up"
             class="sm-txt l-grey ma-0 pa-0 ml-1"
@@ -90,66 +124,86 @@
         </v-item-group>
       </v-col>
     </v-row>
+    <searchResltCate
+      :dialog="searchResltCate"
+      @close="searchResltCate = false"
+    />
+    <searchResltBrnd
+      :dialog="searchResltBrnd"
+      @close="searchResltBrnd = false"
+    />
+    <searchResltBest
+      :dialog="searchResltBest"
+      @close="searchResltBest = false"
+    />
   </v-card>
 </template>
 
 <script>
+import searchResltCate from '@/components/dialog/searchResltCate.vue';
+import searchResltBrnd from '@/components/dialog/searchResltBrnd.vue';
+import searchResltBest from '@/components/dialog/searchResltBest.vue';
   export default {
     name : 'SearchResult',
-  data () {
+    components:{
+      searchResltCate,
+      searchResltBrnd,
+      searchResltBest
+    },
+    data () {
       return {
+        searchResltCate:false,
+        searchResltBrnd:false,
+        searchResltBest:false,
         up: true,
-      heads : [
-        {
-
-          subtit: 342 + '건의',
-          title: '검색결과가 있습니다!'
-        }
-      ],
-      tags: [
+        heads : [
+          {
+            subtit: 342 + '건의',
+            title: '검색결과가 있습니다!'
+          }
+        ],
+        tags: [
         '카테고리',
         '브랜드',
         '인기순으로 보기',
-      ],
-      items: [
-        {
-          brand: '풀무원1',
-          name:'md가 추천하는 꿀이 되는 상품모음2',
-          discount:'45'+ '%',
-          price:'5,500',
-          src: '//dliveimg.kbnc.co.kr/shop/upload/title/345/0000000001255251656491654495_title.png'
-        },
-        {
-          brand: '풀무원1',
-          name:'md가 추천하는 꿀이 되는 상품모음2',
-          discount:'45'+ '%',
-          price:'5,500',
-          src: '//dliveimg.kbnc.co.kr/shop/upload/title/071/0000000001279101656493414491_title.png'
-        },
-        {
-          brand: '풀무원1',
-          name:'md가 추천하는 꿀이 되는 상품모음2',
-          discount:'45'+ '%',
-          price:'5,500',
-          src: '//dliveimg.kbnc.co.kr/shop/upload/title/640/0000000001279881656495449141_title.png'
-        },
-        {
-          brand: '풀무원1',
-          name:'md가 추천하는 꿀이 되는 상품모음2',
-          discount:'45'+ '%',
-          price:'5,500',
-          src: '//dliveimg.kbnc.co.kr/shop/upload/title/071/0000000001279101656493414491_title.png'
-        },
-      ],
-       }
-  },
-  methods: {
-      toggleOrder () {
+        ],
+        items: [
+          {
+            brand: '풀무원1',
+            name:'md가 추천하는 꿀이 되는 상품모음2',
+            discount:'45'+ '%',
+            price:'5,500',
+            src: '//dliveimg.kbnc.co.kr/shop/upload/title/345/0000000001255251656491654495_title.png'
+          },
+          {
+            brand: '풀무원1',
+            name:'md가 추천하는 꿀이 되는 상품모음2',
+            discount:'45'+ '%',
+            price:'5,500',
+            src: '//dliveimg.kbnc.co.kr/shop/upload/title/071/0000000001279101656493414491_title.png'
+          },
+          {
+            brand: '풀무원1',
+            name:'md가 추천하는 꿀이 되는 상품모음2',
+            discount:'45'+ '%',
+            price:'5,500',
+            src: '//dliveimg.kbnc.co.kr/shop/upload/title/640/0000000001279881656495449141_title.png'
+          },
+          {
+            brand: '풀무원1',
+            name:'md가 추천하는 꿀이 되는 상품모음2',
+            discount:'45'+ '%',
+            price:'5,500',
+            src: '//dliveimg.kbnc.co.kr/shop/upload/title/071/0000000001279101656493414491_title.png'
+          },
+        ],
+      }
+    },
+    methods: {
+      toggleOrder (n) {
         this.up = !this.up
       },
-
     },
-
   }
 </script>
 <style lang="">

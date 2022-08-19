@@ -1,6 +1,6 @@
 <template lang="">
   <v-container>
-    <v-card class="pa-2 elevation-0">
+    <v-card class="elevation-0">
       <v-card-tite class="text-h3">
         인증되었습니다
       </v-card-tite>

@@ -3,7 +3,6 @@
     <v-list class="py-3 pt-0 pl-1">
       <v-list-item
         ripple
-        @click="$router.push({ name: 'MyInfo' })"
       >
         <template>
           <v-avatar
@@ -22,7 +21,7 @@
             <v-list-item-subtitle>abc@koreaecom.co.kr</v-list-item-subtitle>
           </v-list-item-content>
 
-          <v-list-item-action>
+          <v-list-item-action @click="$router.push({ name: 'CnfmPassPage'})">
             <v-icon>mdi-chevron-right</v-icon>
           </v-list-item-action>
         </template>

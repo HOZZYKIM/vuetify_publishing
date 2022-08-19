@@ -1,6 +1,6 @@
 <template lang="">
   <v-container>
-    <v-card class="pa-2 elevation-0">
+    <v-card class="elevation-0">
       <v-row>
         <v-col cols="12">
           <v-text-field
@@ -45,6 +45,7 @@
             depressed
             dark
             x-large
+            @click="$router.push('/')"
           >
             로그인
           </v-btn>

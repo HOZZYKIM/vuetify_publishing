@@ -1,6 +1,6 @@
 <template lang="">
   <v-container>
-    <v-card class="pa-0 elevation-0">
+    <v-card class="elevation-0">
       <!-- <v-card-tite class="text-h3">
         비밀번호 <br> 재설정
       </v-card-tite> -->
@@ -36,7 +36,7 @@ export default {
         alert('이메일 인증번호가 일치하지 않습니다.')
       },
 
-    },
+  },
 }
 </script>
 <style lang="">

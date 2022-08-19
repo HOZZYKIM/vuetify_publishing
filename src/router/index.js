@@ -17,6 +17,13 @@ const routes = [
           '@/views/main/mainPage'
         )
       },
+      {
+        path: 'my/successwithdrawal',
+        name: 'WithdrwlRsltPage',
+        component: () => import(
+          '@/views/my/WithdrwlRsltPage'
+        )
+      },
     ]
   },
   {
@@ -221,6 +228,30 @@ const routes = [
         meta: { appbarName: '회원가입' },
         component: () => import(
           '@/views/my/signupComplete'
+        )
+      },
+      {
+        path: '/my/CnfmPassPage',
+        name: 'CnfmPassPage',
+        meta: { appbarName: '회원가입' },
+        component: () => import(
+          '@/views/my/CnfmPassPage'
+        )
+      },
+      {
+        path: '/my/EditMyInfoPage',
+        name: 'EditMyInfoPage',
+        meta: { appbarName: '정보수정' },
+        component: () => import(
+          '@/views/my/EditMyInfoPage'
+        )
+      },
+      {
+        path: '/my/EditMyPassPage',
+        name: 'EditMyPassPage',
+        meta: { appbarName: '비밀번호 재설정' },
+        component: () => import(
+          '@/views/my/EditMyPassPage'
         )
       },
     ]

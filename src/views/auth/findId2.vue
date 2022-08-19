@@ -1,6 +1,6 @@
 <template lang="">
   <v-container>
-    <v-card class="pa-0 elevation-0">
+    <v-card class="elevation-0">
       <v-card-subtitle class="pa-0 py-5 md-txt">
         이메일로 전송된 인증번호 입력 후 일치시 <br>아이디 전체를 확인하실 수 있습니다.
       </v-card-subtitle>
@@ -37,7 +37,7 @@
               class="mb-5"
             >
               <v-list-item-content align="center">
-                <v-list-item-title class="lg-txt my-2">
+                <v-list-item-title class="lg-txt">
                   이메일 인증이 완료되었습니다.<br>
                   검색된 아이디 결과입니다.
                 </v-list-item-title>

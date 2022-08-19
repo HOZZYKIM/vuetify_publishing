@@ -155,6 +155,7 @@
 
 <script>
   export default {
+    name: 'TermsDialog',
     props: {
       dialog: {
         type: Boolean,
